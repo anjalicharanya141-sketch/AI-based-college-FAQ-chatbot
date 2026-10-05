@@ -1,0 +1,100 @@
+COLLEGE FAQ
+
+Q: What are the college working hours?
+A: The college working hours are from 9:00 AM to 4:00 PM, Monday to Saturday.
+
+Q: What are the college office hours?
+A: The administrative office is open from 9:30 AM to 4:30 PM on working days.
+
+Q: How can I contact the college office?
+A: Students can contact the college administrative office during working hours or visit the office on campus.
+
+Q: What courses are offered by the college?
+A: The college offers undergraduate and postgraduate programs in various disciplines. Students should contact the respective department for the current list of programs.
+
+Q: Where is the Computer Science and Engineering department?
+A: The Computer Science and Engineering department is located in the academic block.
+
+Q: How can I contact the CSE department?
+A: Students can visit the CSE department during working hours or contact the department office.
+
+Q: What are the library timings?
+A: The college library is generally open during college working hours. Students should check the latest library notice for changes.
+
+Q: Can students borrow books from the library?
+A: Yes. Students with a valid library membership can borrow books according to the library rules.
+
+Q: How many books can a student borrow?
+A: The number of books and borrowing period depend on the student's category and current library regulations.
+
+Q: Is attendance compulsory?
+A: Students are expected to maintain the minimum attendance required by the college and university regulations.
+
+Q: What happens if attendance is low?
+A: Students with attendance below the required percentage may be subject to the academic rules of the college and university.
+
+Q: How can students apply for leave?
+A: Students should submit a leave application through the procedure specified by their department or college administration.
+
+Q: Are examinations conducted every semester?
+A: Yes. Semester examinations are conducted according to the academic calendar.
+
+Q: Where can students find examination notifications?
+A: Examination notifications are generally published through official college notices and communication channels.
+
+Q: How can I get my examination hall ticket?
+A: Students should follow the examination department's instructions for downloading or collecting hall tickets.
+
+Q: Does the college provide a canteen?
+A: Yes. The college provides a canteen facility for students and staff.
+
+Q: Is there a transport facility?
+A: Transport facilities may be available on selected routes. Students should contact the college transport office for current route and timing information.
+
+Q: Does the college provide hostel facilities?
+A: Hostel facilities may be available for eligible students. Students should contact the hostel administration for current availability and rules.
+
+Q: Is Wi-Fi available on campus?
+A: Campus internet or Wi-Fi facilities may be available in designated areas according to college policies.
+
+Q: Does the college provide placement assistance?
+A: The college provides placement and career guidance support through its placement department.
+
+Q: How can students register for placements?
+A: Eligible students should register with the placement department and follow the placement cell's instructions.
+
+Q: Are internships encouraged?
+A: Yes. Students are encouraged to undertake internships relevant to their course and career goals.
+
+Q: Are extracurricular activities available?
+A: Yes. Students can participate in technical, cultural, sports and other extracurricular activities conducted by the college.
+
+Q: Are there student clubs?
+A: The college may have technical and non-technical student clubs. Students can contact their department or student activity coordinators for details.
+
+Q: How can I get a bonafide certificate?
+A: Students should apply for a bonafide certificate through the college office or the designated student service process.
+
+Q: How can I get a transfer certificate?
+A: Students should contact the college administration and complete the required procedure for obtaining a transfer certificate.
+
+Q: How can I get a fee receipt?
+A: Students can obtain fee-related receipts through the college accounts office or the designated online student portal.
+
+Q: How can I contact the principal?
+A: Students should contact the college administration to request an appointment or obtain information about the principal's office.
+
+Q: What should I do if I have an academic complaint?
+A: Students should first contact their faculty member or department coordinator. If required, the complaint can be escalated through the college grievance procedure.
+
+Q: How does the chatbot work?
+A: The AI Based College FAQ Chatbot uses natural language processing, semantic search, vector embeddings and generative AI to answer questions from the college knowledge base.
+
+Q: What AI technology is used?
+A: The chatbot uses a sentence-transformer model for creating text embeddings, ChromaDB for similarity search, and Google's Gemini generative AI model for generating natural-language answers.
+
+Q: Can the chatbot answer questions that are not in the FAQ?
+A: The chatbot is designed to answer questions using the information available in its knowledge base. If relevant information is not available, it should indicate that the information could not be found.
+
+Q: Is the chatbot available 24 hours?
+A: The software application can be run whenever the system and required services are available. Actual availability depends on how the application is deployed.
