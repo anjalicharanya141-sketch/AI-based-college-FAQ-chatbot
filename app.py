@@ -50,7 +50,11 @@ st.write(
 # CHECK API KEY
 # ---------------------------------------------------------
 
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = st.secrets.get("GOOGLE_API_KEY")
+
+if not api_key:
+    api_key = os.getenv("GOOGLE_API_KEY")
+
 
 if not api_key:
 
