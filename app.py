@@ -1,5 +1,6 @@
 import os
 import re
+import time
 from pathlib import Path
 
 import streamlit as st
@@ -25,7 +26,7 @@ COLLECTION_NAME = "college_faq"
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.8-flash"
 
 
 
@@ -302,13 +303,26 @@ Rules:
 Answer:
 """
 
-    response = gemini.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt
-    )
+    for attempt in range(3):
 
-    return response.text
+        try:
 
+            response = gemini.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt
+            )
+
+            return response.text
+
+        except Exception as error:
+
+            if "503" in str(error) and attempt < 2:
+
+                time.sleep(3)
+
+            else:
+
+                raise error
 
 # ---------------------------------------------------------
 # SIDEBAR
