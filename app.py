@@ -303,7 +303,7 @@ Rules:
 Answer:
 """
 
-    for attempt in range(3):
+        for attempt in range(3):
 
         try:
 
@@ -316,9 +316,18 @@ Answer:
 
         except Exception as error:
 
-            if "503" in str(error) and attempt < 2:
+            error_message = str(error)
 
-                time.sleep(3)
+            if "503" in error_message and attempt < 2:
+
+                time.sleep(5)
+
+            elif "503" in error_message:
+
+                return (
+                    "Gemini is temporarily experiencing high demand. "
+                    "Please try again in a few minutes."
+                )
 
             else:
 
