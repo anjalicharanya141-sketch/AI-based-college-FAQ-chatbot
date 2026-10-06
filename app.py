@@ -25,7 +25,7 @@ COLLECTION_NAME = "college_faq"
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
-GEMINI_MODEL = "gemini-3.8-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 
 
