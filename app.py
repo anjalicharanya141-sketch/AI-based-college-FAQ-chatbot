@@ -305,33 +305,33 @@ Answer:
 
         for attempt in range(3):
 
-        try:
+            try:
 
-            response = gemini.models.generate_content(
-                model=GEMINI_MODEL,
-                contents=prompt
-            )
-
-            return response.text
-
-        except Exception as error:
-
-            error_message = str(error)
-
-            if "503" in error_message and attempt < 2:
-
-                time.sleep(5)
-
-            elif "503" in error_message:
-
-                return (
-                    "Gemini is temporarily experiencing high demand. "
-                    "Please try again in a few minutes."
+                response = gemini.models.generate_content(
+                    model=GEMINI_MODEL,
+                    contents=prompt
                 )
 
-            else:
+                return response.text
 
-                raise error
+            except Exception as error:
+
+                error_message = str(error)
+
+                if "503" in error_message and attempt < 2:
+
+                    time.sleep(5)
+
+                elif "503" in error_message:
+
+                    return (
+                        "Gemini is temporarily experiencing high demand. "
+                        "Please try again in a few minutes."
+                    )
+
+                else:
+
+                    raise error
 
 # ---------------------------------------------------------
 # SIDEBAR
