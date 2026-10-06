@@ -10,6 +10,7 @@ import chromadb
 from google import genai
 
 
+
 # ---------------------------------------------------------
 # SETTINGS
 # ---------------------------------------------------------
@@ -264,11 +265,72 @@ def search_faq(question):
 # ---------------------------------------------------------
 # GEMINI ANSWER
 # ---------------------------------------------------------
-
 def get_answer(
     question,
     documents
 ):
+
+    if not documents:
+        return (
+            "I couldn't find this information "
+            "in the college FAQ."
+        )
+
+    context = "\n\n".join(
+        documents
+    )
+
+    prompt = f"""
+You are a college FAQ chatbot.
+
+Use the following FAQ information to answer
+the student's question.
+
+FAQ INFORMATION:
+{context}
+
+STUDENT QUESTION:
+{question}
+
+Rules:
+- Answer only using the FAQ information.
+- Do not invent information.
+- Give a short and clear answer.
+- If the information is not available, say:
+  "I couldn't find this information in the college FAQ."
+
+Answer:
+"""
+
+    for attempt in range(3):
+
+        try:
+
+            response = gemini.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt
+            )
+
+            return response.text
+
+        except Exception as error:
+
+            error_message = str(error)
+
+            if "503" in error_message and attempt < 2:
+
+                time.sleep(5)
+
+            elif "503" in error_message:
+
+                return (
+                    "Gemini is temporarily experiencing "
+                    "high demand. Please try again later."
+                )
+
+            else:
+
+                raise error
 
     if not documents:
 
@@ -303,7 +365,7 @@ Rules:
 Answer:
 """
 
-        for attempt in range(3):
+    for attempt in range(3):
 
             try:
 
